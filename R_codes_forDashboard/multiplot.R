@@ -1,18 +1,25 @@
-
 rm(list = ls())
-linkMap="https://github.com/Magallanes-at-UTDT/dataViz_2025/raw/refs/heads/main/fragilitymap.gpkg"
+setwd("~/Documents/GITHUBs/UBA/DataViz/R_codes_forDashboard")
+set.seed(123)  # For reproducibility
 
+###
 library(sf)
+library(ggplot2)
 
-border=sf::st_read(linkMap,layer = "border")
+###
+
+link1="https://github.com/magallanes-at-UBA/DataViz/raw/main/"
+link2="fromPython/fragilitymap.gpkg"
+
+border=sf::st_read(paste0(link1,link2),layer = "border")
 
 fragilityMap=sf::st_read(linkMap, layer = "countries")
 
 head(fragilityMap)
 
-library(ggplot2)
+
 mapClus=ggplot() + theme_void() +
 geom_sf(data=border, color='grey') + geom_sf(data=fragilityMap, aes(fill=cluster_label))
 
 mapClus
-saveRDS(mapClus,file = 'mapClus.rds')
+saveRDS(mapClus,file = 'dashboards/mapClus.rds')

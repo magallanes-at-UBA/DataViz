@@ -1,12 +1,19 @@
 rm(list = ls())
+setwd("~/Documents/GITHUBs/UBA/DataViz/R_codes_forDashboard")
+set.seed(123)  # For reproducibility
+
+###
 library(ggplot2)
 library(dplyr) 
+library(ggwordcloud)
 
+###
+link1="https://github.com/magallanes-at-UBA/DataViz/raw/main/"
+link2="fromPython/fragility_total_change2023_2006.csv"
 
-set.seed(123)  # For reproducibility
-link="https://github.com/Magallanes-at-UTDT/dataViz_2025/raw/refs/heads/main/fragility_total_change2023_2006.csv"
-fragility_data =read.csv(link)
+fragility_data =read.csv(paste0(link1,link2))
 
+###
 bar1var=fragility_data %>%
     count(change_category, name = "count") %>%
     mutate(percent = sprintf("(%.1f%%)", count/sum(count)*100)) %>%
@@ -28,10 +35,10 @@ bar1var=fragility_data %>%
 
 bar1var
 
-saveRDS(bar1var, file = "bar1var.rds")
+saveRDS(bar1var, file = "dashboards/bar1var.rds")
 
 ###
-library(ggwordcloud)
+
 cloud1var=ggplot(
     fragility_data,
     aes(
@@ -55,4 +62,4 @@ cloud1var=ggplot(
 # theme(plot.title = element_text(hjust = 0.5, face = "bold"))
 cloud1var
 
-saveRDS(cloud1var, file = "cloud1var.rds")
+saveRDS(cloud1var, file = "dashboards/cloud1var.rds")
