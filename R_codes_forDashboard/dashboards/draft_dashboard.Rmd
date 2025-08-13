@@ -1,5 +1,5 @@
 ---
-title: "My Dashbord at UTDT"
+title: "My Dashbord at UBA"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns

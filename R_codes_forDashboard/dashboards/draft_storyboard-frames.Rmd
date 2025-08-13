@@ -1,5 +1,5 @@
 ---
-title: "My Storyboard at UTDT - frames"
+title: "My Storyboard at UBA - frames"
 output: 
   flexdashboard::flex_dashboard:
     storyboard: true
