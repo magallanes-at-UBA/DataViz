@@ -1,0 +1,45 @@
+---
+title: "My Storyboard at UTDT - frames"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+```
+
+## Intro {.sidebar}
+
+Preparing the dashboard based on the instructions given at a recent lecture at UTDT by Jose Manuel Magallanes
+
+
+### This one took me a while!
+
+
+```{r}
+readRDS("bar1var.rds")
+```
+
+
+
+### I am doing my best here!
+
+```{r}
+readRDS("bivar_americas.rds")
+```
+
+
+### This took us a while too!
+
+```{r}
+readRDS("bivar_farlands.rds")
+```
+
+### Where is your country?
+
+```{r}
+readRDS("mapClus.rds")
+```
+
+

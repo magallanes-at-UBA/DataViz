@@ -1,0 +1,62 @@
+---
+title: "My Storyboard at UTDT - pages"
+output: 
+  flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+```
+
+Sidebar {.sidebar}
+=====================================
+
+
+Preparing the dashboard based on the instructions given at a recent lecture at UTDT by Jose Manuel Magallanes
+
+
+Chapter 1
+===================================== 
+
+
+
+### This one took me a while!
+
+
+```{r}
+readRDS("bar1var.rds")
+```
+
+
+Chapter 2
+===================================== 
+
+
+
+### I am doing my best here!
+
+```{r}
+readRDS("bivar_americas.rds")
+```
+
+Chapter 3
+===================================== 
+
+
+### This took us a while too!
+
+```{r}
+readRDS("bivar_farlands.rds")
+```
+
+Chapter 4
+===================================== 
+
+
+### Where is your country?
+
+```{r}
+readRDS("mapClus.rds")
+```
+
+

@@ -1,0 +1,44 @@
+---
+title: "My Dashbord at UTDT"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+```
+
+## Intro {.sidebar}
+
+Preparing the dashboard based on the instructions given at a recent lecture at UTDT by Jose Manuel Magallanes
+
+
+
+## Column {data-width="450"}
+
+### See this! <!-- a title for plot -->
+
+```{r}
+readRDS("bar1var.rds")
+```
+
+### Now this...
+
+```{r}
+readRDS("bivar_americas.rds")
+```
+
+## Column {data-width="550"}
+
+### What do you see?
+
+```{r}
+readRDS("bivar_farlands.rds")
+```
+
+### What about
+
+```{r}
+readRDS("mapClus.rds")
+```
