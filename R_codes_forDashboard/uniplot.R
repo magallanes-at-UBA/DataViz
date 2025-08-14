@@ -23,8 +23,8 @@ bar1var=fragility_data %>%
         aes(label = paste(count, percent)),  # "Count (XX.X%)"
         vjust = -0.5,  # Position above bars
         size = 5.5
-    ) +
-    labs(x = NULL, y = NULL) +  # Removes axis titles
+    ) + ylim(c(0,100))+
+    labs(x = 'Fragility from 2006 to 2023', y = NULL) +  # Removes axis titles
     theme(
         panel.grid = element_blank(),  # Remove all grid lines
         axis.line.x = element_line(),  # Keep only x-axis line
