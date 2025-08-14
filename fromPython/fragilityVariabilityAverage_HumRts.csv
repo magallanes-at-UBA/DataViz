@@ -1,4 +1,4 @@
-country,region,fragility_Average(HumanRights),fragility_Volatility(HumanRights)
+country,region,fragility.Average_HumanRights,fragility.Volatility_HumanRights
 Afghanistan,South Asia,0.0034877664691115307,0.05187694221646671
 Albania,Europe,-0.024622057547819542,0.1703033153594599
 Algeria,Africa,-0.004892791633490212,0.07264403183997148
